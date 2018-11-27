@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Image,
-  Platform,
-  StyleSheet,
-  View,
-  Text,
-  ScrollView,
-  TouchableOpacity
-} from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 
 class CardHeader extends React.Component {
   render() {
@@ -16,7 +8,7 @@ class CardHeader extends React.Component {
         <Image
           style={{
             marginLeft: 10,
-            tintColor: "white",
+            tintColor: "#cbcbcb",
             width: 60,
             height: 60
           }}

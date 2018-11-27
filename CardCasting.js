@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   Image,
-  Platform,
   StyleSheet,
   View,
   Text,
@@ -14,55 +13,53 @@ class CardCasting extends React.Component {
     return (
       <View style={styles.castingName}>
         <View style={styles.casting}>
-          <Text style={styles.titleActor}>Top Billed Cast</Text>
-          <Text style={styles.SeeAll}>SEE ALL</Text>
+          <Text style={styles.titleCast}>Top Billed Cast</Text>
+          <TouchableOpacity onPress={() => {}}>
+            <View>
+              <Text style={styles.SeeAll}>SEE ALL</Text>
+            </View>
+          </TouchableOpacity>
         </View>
         <ScrollView horizontal={true}>
           <View style={styles.castActor}>
             <Image
               style={{
-                paddingRight: 10,
-                marginRight: 10,
                 width: 150,
                 height: 200
               }}
               source={require("./images/matthew.jpg")}
             />
-            <Text style={styles.actorName}>matthew</Text>
+            <Text style={styles.actorName}>Matthew McCon...</Text>
             <Text style={styles.actor}>Cooper</Text>
           </View>
           <View style={styles.castActor}>
             <Image
               style={{
-                paddingRight: 10,
-                marginRight: 10,
                 width: 150,
                 height: 200
               }}
               source={require("./images/anna.jpg")}
             />
-            <Text style={styles.actorName}>Anna</Text>
+            <Text style={styles.actorName}>Anna Hathaway</Text>
             <Text style={styles.actor}>Brand</Text>
           </View>
           <View style={styles.castActor}>
             <Image
               style={{
-                paddingRight: 10,
-                marginRight: 10,
                 width: 150,
                 height: 200
               }}
               source={require("./images/jessica.jpg")}
             />
-            <Text style={styles.actorName}>Jessica</Text>
+            <Text style={styles.actorName}>Jessica Chastain</Text>
             <Text style={styles.actor}>Murph</Text>
           </View>
         </ScrollView>
         <View style={styles.containerDirector}>
           <Text style={styles.directorWriters}>Director</Text>
-          <Text style={styles.nameDirectors}>Christopher Nolan</Text>
+          <Text style={styles.descriptionDW}>Christopher Nolan</Text>
           <Text style={styles.directorWriters}>Writers</Text>
-          <Text style={styles.nameWriters}>
+          <Text style={styles.descriptionDW}>
             Jonathan Nolan (written by) and Christopher Nolan (written by)
           </Text>
         </View>
@@ -73,59 +70,68 @@ class CardCasting extends React.Component {
 export default CardCasting;
 
 const styles = StyleSheet.create({
-  titleActor: {
-    color: "white",
-    marginTop: 30,
-    marginLeft: 10,
-    fontSize: 30
-  },
-  SeeAll: {
-    color: "#4267b2",
-    fontSize: 15,
-    paddingTop: 45,
-    paddingRight: 20
-  },
+  //----container acteurs---------------------//
+
   castingName: {
     backgroundColor: "rgb(33,33,33)"
   },
+
+  // titre de la partie  casting-----------//
   casting: {
     flexDirection: "row",
     justifyContent: "space-between"
   },
-  actorName: {
+  titleCast: {
     color: "white",
-    fontSize: 14,
-    textAlign: "center"
+    marginTop: 20,
+    marginLeft: 10,
+    fontSize: 30
   },
+  SeeAll: {
+    color: "#146cb2",
+    fontWeight: "bold",
+    fontSize: 15,
+    paddingTop: 35,
+    paddingRight: 20
+  },
+  //---------casting Acteur------------------//
+
   castActor: {
-    paddingTop: 10,
-    paddingBottom: 10,
+    marginRight: 10,
+    marginTop: 10,
+    paddingBottom: 20,
+    borderRadius: 5,
     backgroundColor: "#333333"
   },
-  actor: {
+  actorName: {
+    paddingTop: 10,
     color: "white",
     fontSize: 14,
-    textAlign: "center"
+    textAlign: "left",
+    paddingLeft: 10
   },
+  actor: {
+    color: "#cbcbcb",
+    fontSize: 14,
+    textAlign: "left",
+    paddingLeft: 10
+  },
+
+  //------description director et writer-----------//
+  containerDirector: {
+    paddingBottom: 20
+  },
+
   directorWriters: {
     color: "white",
-    marginTop: 30,
+    marginTop: 20,
     marginLeft: 10,
     fontSize: 20
   },
-  nameDirectors: {
-    color: "white",
-    marginTop: 10,
+  descriptionDW: {
+    color: "#cbcbcb",
+    marginTop: 5,
     marginLeft: 10,
     fontSize: 15
-  },
-  nameWriters: {
-    color: "white",
-    marginTop: 10,
-    marginLeft: 10,
-    fontSize: 15
-  },
-  containerDirector: {
-    paddingBottom: 20
   }
 });

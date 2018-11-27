@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import {
   Image,
-  Platform,
   StyleSheet,
   View,
   Text,
-  ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  TouchableHighlight
 } from "react-native";
 
 class CardMovie extends React.Component {
@@ -31,27 +30,28 @@ class CardMovie extends React.Component {
               onPress={() => {}}
               style={{
                 height: 30,
-                width: 200,
+                width: 220,
+                fontWeight: "bold",
                 marginLeft: 20,
                 marginBottom: 40,
                 borderRadius: 3,
-                backgroundColor: "#4267b2"
+                backgroundColor: "#146cb2"
               }}
             >
               <Text style={styles.buttonAdd}>+ ADD TO WATCHLIST</Text>
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.icons}>
-          <View style={styles.iconStarYellow}>
+        <View style={styles.containerIcons}>
+          <View style={styles.icon}>
             <Image
               style={{ marginLeft: 5, width: 30, height: 30 }}
               source={require("./images/starGold.png")}
             />
-            <Text style={styles.iconsText}>8.6/10</Text>
-            <Text style={styles.iconsSSText}>1.1M</Text>
+            <Text style={styles.iconsTitle}>8.6/10</Text>
+            <Text style={styles.iconsText}>1.1M</Text>
           </View>
-          <View style={styles.iconStar}>
+          <View style={styles.icon}>
             <Image
               style={{
                 marginLeft: 20,
@@ -60,20 +60,24 @@ class CardMovie extends React.Component {
               }}
               source={require("./images/starEmpty.png")}
             />
-            <Text style={styles.iconsText}>RATE THIS</Text>
+            <Text style={styles.iconsTitle}>RATE THIS</Text>
+            <Text style={styles.iconsText} />
           </View>
-          <View style={styles.iconMetascore}>
-            <Image
+          <View style={styles.icon}>
+            <TouchableHighlight
+              onPress={() => {}}
               style={{
                 marginLeft: 20,
                 width: 30,
                 height: 30,
-                backgroundColor: "white"
+                backgroundColor: "#66CC33"
               }}
-              source={require("./images/starEmpty.png")}
-            />
-            <Text style={styles.iconsText}>Metascore</Text>
-            <Text style={styles.iconsSSText}>46 critic reviews</Text>
+            >
+              <Text style={styles.Metascore}>74</Text>
+            </TouchableHighlight>
+
+            <Text style={styles.iconsTitle}>Metascore</Text>
+            <Text style={styles.iconsText}>46 critic reviews</Text>
           </View>
         </View>
       </View>
@@ -84,6 +88,12 @@ class CardMovie extends React.Component {
 export default CardMovie;
 
 const styles = StyleSheet.create({
+  //-----container carte film-------------//
+  movieCard: {
+    backgroundColor: "rgb(33,33,33)",
+    marginBottom: 10,
+    paddingBottom: 10
+  },
   title: {
     color: "white",
     marginTop: 30,
@@ -91,23 +101,19 @@ const styles = StyleSheet.create({
     fontSize: 40
   },
   description: {
-    color: "white",
+    color: "#cbcbcb",
     marginLeft: 10,
     marginTop: 20,
-    fontSize: 11
+    fontSize: 14
   },
-  movieCard: {
-    backgroundColor: "rgb(33,33,33)",
-    marginBottom: 10,
-    paddingBottom: 10
-  },
+  //-------carte affiche + synopis----/
   movie: {
     flexDirection: "row"
   },
   synopsis: {
     color: "white",
     fontSize: 14,
-    paddingRight: 50,
+    paddingRight: 25,
     paddingLeft: 20,
     marginTop: 30,
     textAlign: "justify",
@@ -123,28 +129,35 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center"
   },
-  icons: {
+
+  //--------icones note et metascore----------//
+  containerIcons: {
     marginLeft: 20,
     marginTop: 40,
+    paddingBottom: 20,
     flexDirection: "row"
   },
+
+  icon: {
+    justifyContent: "space-between",
+    marginLeft: 20,
+    width: 100,
+    paddingBottom: 10
+  },
+  Metascore: {
+    textAlign: "center",
+    color: "white",
+    fontWeight: "bold",
+    paddingTop: 7
+  },
+  iconsTitle: {
+    paddingTop: 7,
+    color: "white",
+    justifyContent: "space-between"
+  },
   iconsText: {
-    color: "white"
-  },
-  iconStarYellow: {
-    marginLeft: 20,
-    width: 100
-  },
-  iconStar: {
-    marginLeft: 20,
-    width: 100
-  },
-  iconMetascore: {
-    marginLeft: 20,
-    width: 100
-  },
-  iconsSSText: {
     fontSize: 10,
-    color: "gray"
+    color: "#cbcbcb"
   }
+  //-------------------------------------//
 });
