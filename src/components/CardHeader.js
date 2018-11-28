@@ -12,7 +12,7 @@ class CardHeader extends React.Component {
             width: 60,
             height: 60
           }}
-          source={require("../images/imdb.png")}
+          source={require("../../images/imdb.png")}
         />
       </View>
     );

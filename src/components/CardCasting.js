@@ -22,32 +22,24 @@ class CardCasting extends React.Component {
         </View>
         <ScrollView horizontal={true}>
           <View style={styles.castActor}>
+            <Image />
             <Image
-              style={{
-                width: 150,
-                height: 200
-              }}
-              source={require("../images/matthew.jpg")}
+              style={styles.imageActor}
+              source={require("../../images/matthew.jpg")}
             />
             <Actors name="Matthew McC..." role="Cooper" />
           </View>
           <View style={styles.castActor}>
             <Image
-              style={{
-                width: 150,
-                height: 200
-              }}
-              source={require("../images/anna.jpg")}
+              style={styles.imageActor}
+              source={require("../../images/anna.jpg")}
             />
             <Actors name="Anne Hathaway" role="Brand" />
           </View>
           <View style={styles.castActor}>
             <Image
-              style={{
-                width: 150,
-                height: 200
-              }}
-              source={require("../images/jessica.jpg")}
+              style={styles.imageActor}
+              source={require("../../images/jessica.jpg")}
             />
             <Actors name="Jessica Chastain" role="Murph" />
           </View>
@@ -96,11 +88,14 @@ const styles = StyleSheet.create({
   castActor: {
     marginRight: 10,
     marginTop: 10,
-    paddingBottom: 20,
+    paddingBottom: 10,
     borderRadius: 5,
     backgroundColor: "#333333"
   },
-
+  imageActor: {
+    width: 150,
+    height: 200
+  },
   //------description director et writer-----------//
   containerDirector: {
     paddingBottom: 20

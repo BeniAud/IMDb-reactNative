@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  Image,
-  StyleSheet,
-  View,
-  Text,
-  ScrollView,
-  TouchableOpacity
-} from "react-native";
+import { Image, StyleSheet, View, Text } from "react-native";
 
 class Actors extends React.Component {
   render() {
@@ -25,7 +18,7 @@ const styles = StyleSheet.create({
   castActor: {
     marginRight: 10,
     marginTop: 10,
-    paddingBottom: 20,
+    paddingBottom: 10,
     borderRadius: 5,
     backgroundColor: "#333333"
   },
