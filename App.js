@@ -8,9 +8,9 @@
 
 import React, { Component } from "react";
 import { StyleSheet, ScrollView } from "react-native";
-import CardMovie from "./CardMovie";
-import CardCasting from "./CardCasting";
-import CardHeader from "./CardHeader";
+import CardMovie from "./components/CardMovie";
+import CardCasting from "./components/CardCasting";
+import CardHeader from "./components/CardHeader";
 
 export default class App extends Component {
   render() {

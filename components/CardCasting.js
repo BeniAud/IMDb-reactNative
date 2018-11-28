@@ -7,7 +7,7 @@ import {
   ScrollView,
   TouchableOpacity
 } from "react-native";
-
+import Actors from "./Actors";
 class CardCasting extends React.Component {
   render() {
     return (
@@ -27,10 +27,9 @@ class CardCasting extends React.Component {
                 width: 150,
                 height: 200
               }}
-              source={require("./images/matthew.jpg")}
+              source={require("../images/matthew.jpg")}
             />
-            <Text style={styles.actorName}>Matthew McCon...</Text>
-            <Text style={styles.actor}>Cooper</Text>
+            <Actors name="Matthew McC..." role="Cooper" />
           </View>
           <View style={styles.castActor}>
             <Image
@@ -38,10 +37,9 @@ class CardCasting extends React.Component {
                 width: 150,
                 height: 200
               }}
-              source={require("./images/anna.jpg")}
+              source={require("../images/anna.jpg")}
             />
-            <Text style={styles.actorName}>Anna Hathaway</Text>
-            <Text style={styles.actor}>Brand</Text>
+            <Actors name="Anne Hathaway" role="Brand" />
           </View>
           <View style={styles.castActor}>
             <Image
@@ -49,10 +47,9 @@ class CardCasting extends React.Component {
                 width: 150,
                 height: 200
               }}
-              source={require("./images/jessica.jpg")}
+              source={require("../images/jessica.jpg")}
             />
-            <Text style={styles.actorName}>Jessica Chastain</Text>
-            <Text style={styles.actor}>Murph</Text>
+            <Actors name="Jessica Chastain" role="Murph" />
           </View>
         </ScrollView>
         <View style={styles.containerDirector}>
@@ -102,19 +99,6 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     borderRadius: 5,
     backgroundColor: "#333333"
-  },
-  actorName: {
-    paddingTop: 10,
-    color: "white",
-    fontSize: 14,
-    textAlign: "left",
-    paddingLeft: 10
-  },
-  actor: {
-    color: "#cbcbcb",
-    fontSize: 14,
-    textAlign: "left",
-    paddingLeft: 10
   },
 
   //------description director et writer-----------//

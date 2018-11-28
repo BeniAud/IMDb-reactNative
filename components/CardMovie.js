@@ -19,7 +19,7 @@ class CardMovie extends React.Component {
         <View style={styles.movie}>
           <Image
             style={{ width: 100, height: 150, marginTop: 30, marginLeft: 10 }}
-            source={require("./images/interstellar.jpg")}
+            source={require("../images/interstellar.jpg")}
           />
           <View style={styles.movieAdd}>
             <Text style={styles.synopsis}>
@@ -46,7 +46,7 @@ class CardMovie extends React.Component {
           <View style={styles.icon}>
             <Image
               style={{ marginLeft: 5, width: 30, height: 30 }}
-              source={require("./images/starGold.png")}
+              source={require("../images/starGold.png")}
             />
             <Text style={styles.iconsTitle}>8.6/10</Text>
             <Text style={styles.iconsText}>1.1M</Text>
@@ -58,7 +58,7 @@ class CardMovie extends React.Component {
                 width: 30,
                 height: 30
               }}
-              source={require("./images/starEmpty.png")}
+              source={require("../images/starEmpty.png")}
             />
             <Text style={styles.iconsTitle}>RATE THIS</Text>
             <Text style={styles.iconsText} />
